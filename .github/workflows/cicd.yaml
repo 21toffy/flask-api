@@ -15,7 +15,6 @@ jobs:
 
       - name: Build Docker image
         run: |
-          cd api/
           docker build -t oluwatofunmi/question-answer:latest .
 
       - name: Login to Docker Hub
