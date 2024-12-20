@@ -1,6 +1,6 @@
 # Backend Internship Project
 
-# Flask Backend with OpenAI Integration
+# Flask Backend AP
 
 ## Requirements
 - Docker & Docker Compose
