@@ -15,20 +15,12 @@ check_migrations() {
 }
 
 # Function to check if database is ready
-wait_for_db() {
-    echo "Waiting for database..."
-    until PGPASSWORD=$POSTGRES_PASSWORD psql -h "db" -p "5432" -U "$POSTGRES_USER" -d "$POSTGRES_DB" -c '\q' 2>/dev/null; do
-        echo "Postgres is unavailable - sleeping"
-        sleep 1
-    done
-    echo "Database is ready!"
-}
+
 
 # Initialize migrations if needed
 check_migrations
 
 # Wait for database
-wait_for_db
 
 echo "Running database migrations..."
 # Create a new migration if there are changes
